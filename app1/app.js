@@ -2,6 +2,11 @@ function AppController($route) {
     $route.parent(this);
     $route.when('/foo', {template: 'foo.html', controller: FooController});
     $route.when('/bar', {template: 'bar.html', controller: BarController});
+    
+    var me = this;
+    this.$on('$afterRouteChange', function(){
+        me.currentRoute = $route.current;
+    });
 }
 
 function FooController() {
