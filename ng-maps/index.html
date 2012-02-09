@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsOm46TUYe0lKZc9GF-M6eLvYnILABZUU&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var myHomeTown = new google.maps.LatLng(48, -79);
+        var myOptions = {
+          center: myHomeTown,
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            myOptions);
+
+      var marker = new google.maps.Marker({
+          position: myHomeTown,
+          map: map,
+          animation: google.maps.Animation.DROP,
+          title:"My Home Town"
+      });
+
+
+
+      // var contentString = '<iframe src="http://en.wikipedia.org/wiki/Rouyn-Noranda"></iframe>';
+
+      // var infowindow = new google.maps.InfoWindow({
+      //     content: contentString
+      // });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        //infowindow.open(map,marker);
+        $('#wiki').attr('src', "http://en.wikipedia.org/wiki/Rouyn-Noranda");
+      });
+
+      google.maps.event.addListener(map, 'click', function() {
+        console.log('click on map', arguments);
+      });
+
+
+
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:50%; height:100%; float:left; position:fixed"></div>
+    <iframe id="wiki" src="http://en.wikipedia.org" style="width:50%; height:100%; float:right; position:fixed"></iframe>
+  </body>
+</html>

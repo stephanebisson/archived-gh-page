@@ -1,0 +1,2 @@
+[{"id":1,"name":"preparer le souper","desc":"couper les legumes, cuire les nouilles, etc..."},
+{"id":2,"name":"faire du lavage","desc":"trier, mettre dans la laveuse, etendre dehors"}]
