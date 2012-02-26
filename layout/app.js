@@ -1,8 +1,8 @@
 var app = angular.module('app', []);
 
 app.run(function($route, $rootScope){
-    $route.when('/one', {templates: {layout: 'horizontal.html', left:'blue.html', right:'red.html'}});
-    $route.when('/two', {templates: {layout: 'vertical.html', top:'blue.html', bottom:'red.html'}});
+    $route.when('/view1', {templates: {layout: 'horizontal.html', left:'foo.html', right:'bar.html'}});
+    $route.when('/view2', {templates: {layout: 'vertical.html', top:'foo.html', bottom:'bar.html'}});
     
     $rootScope.$on('$beforeRouteChange', function(scope, newRoute){
         $rootScope.templates = newRoute.$route.templates;

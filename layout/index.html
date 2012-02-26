@@ -4,15 +4,16 @@
 		
 		<script type="text/javascript" src="app.js"></script>
 		
-		<script type="text/ng-template" id="blue.html">
-			BLUE
+		<script type="text/ng-template" id="foo.html">
+			<p>FOO</p>
 		</script>
 		
-		<script type="text/ng-template" id="red.html">
-			RED
+		<script type="text/ng-template" id="bar.html">
+			<p>BAR</p>
 		</script>
 		
 		<script type="text/ng-template" id="horizontal.html">
+			<p>this is the horizontal layout</p>
 			<table><tr><td>
 				<ng:include src="templates.left" />
 			</td><td>
@@ -21,6 +22,7 @@
 		</script>
 		
 		<script type="text/ng-template" id="vertical.html">
+			<p>this is the vertical layout</p>
 			<table><tr><td>
 				<ng:include src="templates.top" />
 			</td></tr><tr><td>
@@ -29,9 +31,8 @@
 		</script>
 	</head>
 	<body>
-		<a href="#/one">one</a> | <a href="#/two">two</a>
+		<a href="#/view1">horizontal</a> | <a href="#/view2">vertical</a>
 		<hr />
-		{{templates.layout}}
 		<ng:include src="templates.layout" />
 	</body>
 </html>
