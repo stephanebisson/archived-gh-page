@@ -1,1 +1,5 @@
-<div>{{tasks}}</div>
+<div>
+	<div ng:repeat="task in tasks">
+		<a href="#tasks/{{task.id}}">{{task.name}}</a>
+	</div>
+</div>

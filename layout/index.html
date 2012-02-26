@@ -1,0 +1,36 @@
+<html ng:app="app">
+	<head>
+		<script type="text/javascript" src="http://ci.angularjs.org/view/AngularJS/job/angular.js-angular-master/221/artifact/build/pkg/0.10.7-230f29d0/angular-0.10.7-230f29d0.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		
+		<script type="text/ng-template" id="blue.html">
+			BLUE
+		</script>
+		
+		<script type="text/ng-template" id="red.html">
+			RED
+		</script>
+		
+		<script type="text/ng-template" id="horizontal.html">
+			<table><tr><td>
+				<ng:include src="templates.left" />
+			</td><td>
+				<ng:include src="templates.right" />
+			</td></tr></table>
+		</script>
+		
+		<script type="text/ng-template" id="vertical.html">
+			<table><tr><td>
+				<ng:include src="templates.top" />
+			</td></tr><tr><td>
+				<ng:include src="templates.bottom" />
+			</td></tr></table>
+		</script>
+	</head>
+	<body>
+		<a href="#/one">one</a> | <a href="#/two">two</a>
+		<hr />
+		{{templates.layout}}
+		<ng:include src="templates.layout" />
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<div>
+	<style>
+	    .ng-invalid { border: solid 1px red; }
+	  </style>
+	<h2>Edit task #{{task.id}}</h2>
+	<form name="myForm">
+		
+		Name: <input 
+				type="text" 
+				name="taskName" 
+				ng:model="task.name" 
+				required 
+				ng:minlength="1" 
+				ng:maxlength="10" 
+				/><br />
+				
+		Desc: <textarea name="taskDesc" ng:model="task.desc"></textarea><br />
+		
+		Email: <input type="email" name="taskEmail" ng:model="task.email" /><br />
+		
+		Type: <select 
+				ng:options="t.type for t in taskTypes" 
+				name="taskType" 
+				ng:model="type" 
+				required>
+				<option value="">Please Select</option>
+			</select><br />
+			
+		Type2: <fancySelect 
+				ng:options="t.type for t in taskTypes" 
+				name="taskType" 
+				ng:model="type" 
+				required>
+				<option value="">Please Select</option>
+			</fancySelect><br />
+			
+		Due date: <input type="tigerDate" name="dueDate" ng:model="task.dueDate" ng:change="verify()"/>
+		
+		<button ng:disabled="{{myForm.$invalid}}">Save</button>
+		
+	</form>
+	<pre>myForm: {{myForm | json}}</pre>
+</div>
