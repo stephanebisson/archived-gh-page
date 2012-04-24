@@ -4,15 +4,17 @@
 	  </style>
 	<h2>Edit task #{{task.id}}</h2>
 	<form name="myForm">
-		
-		Name: <input 
+		<dl>
+		<dt>Name:</dt> 
+		<dd><input 
 				type="text" 
 				name="taskName" 
 				ng:model="task.name" 
 				required 
 				ng:minlength="1" 
 				ng:maxlength="10" 
-				/><br />
+				/>
+		</dd>
 				
 		Desc: <textarea name="taskDesc" ng:model="task.desc"></textarea><br />
 		
@@ -35,7 +37,7 @@
 			</fancySelect><br />
 			
 		Due date: <input type="tigerDate" name="dueDate" ng:model="task.dueDate" ng:change="verify()"/>
-		
+		</dl>
 		<button ng:disabled="{{myForm.$invalid}}">Save</button>
 		
 	</form>
