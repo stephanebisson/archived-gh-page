@@ -9,13 +9,13 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : 'the four-line and one-pic blog'
+tagline: 'asdf'
 author :
   name : Stephane Bisson
   email : stephane.c.bisson@gmail.com
   github : stephanebisson
-  twitter : @stephanecbisson
+  twitter : stephanecbisson
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
