@@ -12,6 +12,8 @@ Directly following the intro we'll learn exactly _how_ Jekyll does what it does.
 
 ### What is Jekyll?
 
+![some kitten](http://placekitten.com/g/800/600)
+
 Jekyll is a parsing engine bundled as a ruby gem used to build static websites from
 dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as "a simple, blog aware, static site generator".
 
