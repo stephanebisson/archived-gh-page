@@ -2,10 +2,9 @@
 layout: post
 category : javascript
 tags : [javascript,jquery,mvp,testing]
+hidden : hidden
 ---
 {% include JB/setup %}
-
-# title
 
 A few weeks ago, my friend Matt and I, at ThoughtWorks Chengdu, were discussing the use of jquery in his project. More specifically: how to test it.
 
