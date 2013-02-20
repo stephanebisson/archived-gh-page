@@ -2,7 +2,6 @@
 layout: post
 category : javascript
 tags : [javascript,jquery,mvp,testing]
-hidden : hidden
 ---
 {% include JB/setup %}
 
