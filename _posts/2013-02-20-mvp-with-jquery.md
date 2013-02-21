@@ -120,3 +120,8 @@ describe('AddressPresenter', function() {
 
 Feel free to rewrite it [here](/pairing/). The unit tests are already there, you just have to write the code...
 
+## Conclusion
+
+I like the separation of concern of the new code but I don't like the size. Breaking it apart has tripled the number of LOC.
+Is there a better way to do it? Am I worrying for nothing here?
+
