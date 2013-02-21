@@ -98,6 +98,8 @@ describe('AddressPresenter', function() {
 			.action('showStateOrProvinceField')
 			.action('hideStateOrProvinceField')
 			.build();
+
+		AddressPresenter(view);
 	});
 
 	it('should show state when I select australian address', function() {
