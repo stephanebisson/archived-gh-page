@@ -1,7 +1,11 @@
 ---
 layout: post
 category : javascript
-tags : [javascript,jquery,mvp,testing]
+tags :
+    - javascript
+    - jquery
+    - mvp
+    - testing
 ---
 {% include JB/setup %}
 
